@@ -1,4 +1,14 @@
 <script type="text/javascript">
+	var ready;
+	ready = function() {
+
+	  launchBasic();
+		doRes();
+	};
+
+	$(document).ready(ready);
+	$(document).on('page:load', ready);
+
 	var imgGrind=250;
 	function launchBasic () {
 		var a=100;
@@ -17,9 +27,6 @@
 			$(elem).css('height',imgGrind+'px');
 		},time);
 	}
-	$(document).ready(function(){
-		doRes();
-	});
 	$(window).scroll(function (event) {
 	    var scroll = $(window).scrollTop();
 	    if(scroll>10){
@@ -58,4 +65,4 @@
 	<img src="http://i.picresize.com/images/2014/09/30/wOrj.jpg" alt="" class="basic">
 	<br><br>
 </div>
-
+<%= render "partials/profileForm"%>

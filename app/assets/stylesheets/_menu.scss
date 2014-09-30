@@ -28,22 +28,16 @@ nav{
 		position: absolute;
 		width: 40%;
 		text-align: center;
-		background-color: #fff;
-		border-radius: 3px;
+
 		input[type=text]{
-			width: 50%;
+			width: 100%;
 			border:none;
 			border-radius: 3px;
 			height: 35px;
 			font-size: 15px;
 			color:#333;
+			text-align: center;
 			
-			transition: all .5s;
-			&:focus{
-				padding-left: 0%;
-				width: 98%;
-				outline: none;
-			}
 		}
 		
 	}

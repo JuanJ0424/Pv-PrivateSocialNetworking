@@ -1,0 +1,41 @@
+.cardBody{
+	width: 400px;
+	height: 500px;
+	border: 1px solid #999;
+	box-shadow: 0px 0px 10px #222;
+	border-radius: 3px;
+	margin-left: calc(50% - 200px);
+	margin-left: -moz-calc(50% - 200px);
+	margin-top: 100px;
+	text-align: center;
+	color:#999;
+	label{
+		font-size: 15px;
+		color:#333;
+	}
+	.head{
+		background-color: #000;
+		color:#fff;
+		font-size: 30px;
+		font-weight: 300;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	input[type=text],input[type=password], input[type=email]{
+		width: 80%;
+		height: 30px;
+		border:none;
+		border-bottom: 3px solid #999;
+		border-radius: 3px;
+		font-size: 13px;
+		text-align: center;
+		outline: none;
+		transition: all .5s;
+		&:focus{
+			transition: all .5s;
+			border-bottom: 3px solid #333;
+		}
+	}
+}

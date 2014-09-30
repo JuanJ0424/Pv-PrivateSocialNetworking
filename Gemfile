@@ -32,6 +32,8 @@ end
 
 gem 'font-awesome-rails'
 
+gem 'paperclip', '~> 3.0'
+
 gem 'devise', '3.0.0'
 
 # Use ActiveModel has_secure_password
