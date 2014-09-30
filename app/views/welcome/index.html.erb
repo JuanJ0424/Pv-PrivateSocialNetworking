@@ -17,7 +17,18 @@
 			$(elem).css('height',imgGrind+'px');
 		},time);
 	}
-	
+	$(document).ready(function(){
+		doRes();
+	});
+	$(window).scroll(function (event) {
+	    var scroll = $(window).scrollTop();
+	    if(scroll>10){
+	    	$("#Btn_holder").css("position","fixed");
+	    }else{
+	    	$("#Btn_holder").css("position","relative");
+	    }
+	});
+		
 </script>
 <style type="text/css">
 	#imOnList{
@@ -25,9 +36,9 @@
 	}
 </style>
 <%= render "partials/sidebar"%>
-
+	<div id="Btn_holder"><div style="margin-left:calc(50% - 100px);" align="center" id="imOnList" class="btn btn_solid">I am on the list.</div><br><br></div>
 <div class="contentI">
-	<div style="margin-left:calc(50% - 100px);" align="center" id="imOnList" class="btn btn_solid">I am on the list.</div><br><br>
+
 	<img class="basic" src="https://farm4.staticflickr.com/3930/15196319387_4649c1ed9c_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
 	<img class="basic" src="https://farm6.staticflickr.com/5557/15013691208_a2a736ba37_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
 	<img class="basic" src="https://farm8.staticflickr.com/7286/9136896334_5dbe4d22db_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
