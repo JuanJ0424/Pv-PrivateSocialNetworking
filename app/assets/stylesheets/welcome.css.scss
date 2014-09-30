@@ -12,10 +12,12 @@ body{
 }
 
 
-.content{
+div.contentI{
 	width: 75%;
 	margin-left: 25%;
+	margin-top: 100px;
 	text-align: center;
+	min-width: 1000px;
 	img{
 		padding: 0px;
 		transition: all .5s;

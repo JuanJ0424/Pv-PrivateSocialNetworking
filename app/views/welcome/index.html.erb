@@ -1,40 +1,50 @@
 <script type="text/javascript">
+	var imgGrind=250;
 	function launchBasic () {
 		var a=100;
+		$('img').attr("draggable","false")
 		$('.basic').each(function(){
 			doGrow(a,$(this));
 			a+=100;
 		});
+		setTimeout(function(){
+			$("#imOnList").css('opacity','1');
+		},a+100);
 	}
 	function doGrow (time, elem) {
 		setTimeout(function(){
-			$(elem).css('width','200px');
-			$(elem).css('height','200px');
+			$(elem).css('width',imgGrind+'px');
+			$(elem).css('height',imgGrind+'px');
 		},time);
 	}
+	
 </script>
-<div class="sidebar">
-	<header>
-		<div class="h2">Pv</div>
-		<div class="h3">Are You on the list?</div>
-	</header><br><br>
-	<div class="content">
-		<b><%=app_name%></b> is an exclusive <i>social network</i> where you'll never get weird notifications about things you don't mind, like those games that you shall never play, and those partys you really hate... but... how to do that? well, we think people should decide who is in them new favourite place, so Pv, it's that, an over invitation social network, so... Are you on the list?
-	</div><br><br>
+<style type="text/css">
+	#imOnList{
+		opacity: 0;
+	}
+</style>
+<%= render "partials/sidebar"%>
 
-	<div class="btn btn_solid" style="margin-left:calc(50% - 100px);">Solicitar Acceso</div>
-</div>
-
-<div class="content">
+<div class="contentI">
+	<div style="margin-left:calc(50% - 100px);" align="center" id="imOnList" class="btn btn_solid">I am on the list.</div><br><br>
 	<img class="basic" src="https://farm4.staticflickr.com/3930/15196319387_4649c1ed9c_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
 	<img class="basic" src="https://farm6.staticflickr.com/5557/15013691208_a2a736ba37_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
 	<img class="basic" src="https://farm8.staticflickr.com/7286/9136896334_5dbe4d22db_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
 	<img src="https://farm4.staticflickr.com/3884/15367856356_9f04678caf_q.jpg" alt="Unknown" class="basic">
 	<img src="https://farm3.staticflickr.com/2949/15390130192_a56eb9c1b6_q.jpg" alt="https://www.flickr.com/photos/stevensiegel/" class="basic">
-	<br>
+	<span class="spacer"><br></span>
 	<img src="http://i.picresize.com/images/2014/09/30/dhTkr.jpg" alt="https://www.flickr.com/photos/albireo2006" class="basic">
 	<img src="https://farm4.staticflickr.com/3865/15391897665_5b6d5b1815_q.jpg" alt="https://www.flickr.com/photos/michael_locke/" class="basic">
 	<img src="https://farm6.staticflickr.com/5573/15263047045_5c6b731fab_q.jpg" alt="https://www.flickr.com/photos/michael_locke/" class="basic">
 	<img src="https://farm6.staticflickr.com/5483/14125320555_55c77d6af8_q.jpg" alt="https://www.flickr.com/photos/michaelerhardsson/" class="basic">
 	<img src="https://farm6.staticflickr.com/5567/15145600832_2db5394258_q.jpg" alt="" class="basic">
+	<span class="spacer"><br></span>
+	<img src="https://farm7.staticflickr.com/6211/6207626565_5a1396068c_q.jpg" alt="https://www.flickr.com/photos/dr-ip/" class="basic">
+	<img src="https://farm4.staticflickr.com/3154/3031668434_2f39a56d04_q.jpg" alt="https://www.flickr.com/photos/hesenrre/" class="basic">
+	<img src="https://farm4.staticflickr.com/3556/3545291508_268b60fe45_q.jpg" alt="https://www.flickr.com/photos/click_on/" class="basic">
+	<img src="https://farm4.staticflickr.com/3324/3544396399_f1565eeaa8_q.jpg" alt="https://www.flickr.com/photos/click_on/" class="basic">
+	<img src="http://i.picresize.com/images/2014/09/30/wOrj.jpg" alt="" class="basic">
+	<br><br>
 </div>
+
