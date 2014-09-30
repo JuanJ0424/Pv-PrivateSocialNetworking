@@ -1,5 +1,6 @@
 == README
 
+  TRUE GANSTERS 7.7
 
 ==Ruby
 * Ruby version '2.1.2'
