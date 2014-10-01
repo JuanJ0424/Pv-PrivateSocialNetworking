@@ -1,0 +1,73 @@
+<script type="text/javascript">
+	var imgGrind=200;
+	var ready;
+	ready = function() {
+
+	  	launchBasic();
+		doRes();
+
+	};
+
+	$(document).ready(ready);
+	$(document).on('page:load', ready);
+
+	
+	function launchBasic () {
+		var a=100;
+		$('img').attr("draggable","false")
+		$('.basic').each(function(){
+			doGrow(a,$(this));
+			a+=100;
+		});
+		setTimeout(function(){
+			$("#imOnList").css('opacity','1');
+		},a+100);
+	}
+	function doGrow (time, elem) {
+		setTimeout(function(){
+			$(elem).css('width',imgGrind+'px');
+			$(elem).css('height',imgGrind+'px');
+		},time);
+	}
+	$(window).scroll(function (event) {
+	    $(".content").each(function(){
+	    	doSc($(this));
+	    });
+	});
+	function doSc(elem){
+		var scroll = $(window).scrollTop();
+		var space=$(elem).data("place");
+		if(space<2){
+			var s="calc("+100*space+"% + ";
+			var s2=(82-scroll)/space;
+			s=s+s2+"px)";
+			$(elem).css("top",s);
+		}else{
+			var s="calc("+100*space+"% + ";
+			var s2=(0-scroll)*space;
+			s=s+s2+"px)";
+			$(elem).css("top",s);
+		}
+	}
+		
+</script>
+<style type="text/css">
+	#imOnList{
+		opacity: 0;
+	}
+</style>
+	<div id="Btn_holder" style="margin-left:0px; width:100%"><div style="margin-left:calc(50% - 100px);" align="center" id="imOnList" class="btn btn_solid">I am on the list.</div><br><br></div>
+<section class="contentI" >
+	<div class="h1">Private Social Network</div>
+	<pre>Pv, for it's fiends</pre>
+	<%=render "partials/propose1" %>
+</section>
+<section class="content contentII" data-place="1">
+	<div class="h1">There's no place like home,<br> but Pv</div>
+</section>
+<section class="content contentIII" data-place="2">
+	<div class="h1">Are you on the <b>list</b>?</div>
+	<div class="contentText"><b><%=app_name%></b> is an exclusive <i>social network</i> where you'll never get weird notifications about things you don't mind, like those games that you shall never play, and those partys you really hate... but... how to do that? well, we think people should decide who is in them new favourite place, so Pv, it's that, an over invitation social network, so... Are you on the list?</div><br><br>
+	<div class="btn btn_solid" style="margin-left:calc(50% - 100px);">Ask for an invitation</div>
+</section>
+

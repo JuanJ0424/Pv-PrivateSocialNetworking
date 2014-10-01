@@ -70,6 +70,7 @@ section.contentI,section.contentII, section.contentIII{
 	text-align: center;
 	position: absolute;
 	height: calc(100% - 82px);
+	min-height: 700px;
 	.h1{
 		font-size: 100px;
 		color:#000;
@@ -94,9 +95,9 @@ section.contentI{
 }
 section.contentII{
 	top: calc(100% + 82px);
-	background-color: rgb(225,225,225);
+	background-color: rgb(255,255,255);
 }
 section.contentIII{
 	top: 200%;
-	background-color: rgb(195,195,195);
+	background-color: rgb(225,225,225);
 }
