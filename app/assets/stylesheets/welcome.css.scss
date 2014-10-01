@@ -6,21 +6,7 @@
 @import 'buttons';
 @import 'menu';
 
-.logo, .logo2{
-	margin-left: 30px;
-	font-size: 30px;
-	font-weight: 700;
-	color:#fff;
-	padding: 10px;
-	border:2px solid #fff;
-	width: 40px;
-	text-align: center;
-	border-radius: 10px;
-}
-.logo2{
-	border:2px solid #000;
-	color:#000;
-}
+.hidden{display: none;}
 
 body{
 	margin: 0px;
@@ -37,15 +23,6 @@ body{
 	}
 }
 
-#Btn_holder{
-	background-color: rgba(255,255,255,.6);
-	width: 75%;
-	position: relative;
-	margin-left: 25%;
-	margin-top: 83px;
-	top:0px;
-	padding-top: 10px;
-}
 div.contentI{
 	width: 75%;
 	margin-left: 25%;
@@ -64,6 +41,7 @@ div.contentI{
 		
 	}
 }
+
 section.contentI,section.contentII, section.contentIII{
 	width: 100%;
 	transition: all .009s;

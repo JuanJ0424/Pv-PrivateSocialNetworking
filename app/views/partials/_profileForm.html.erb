@@ -1,22 +1,49 @@
+
+<script type="text/javascript">
+  var ready;
+  ready = function() {
+    named();
+  }
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+
+  function named (argument) {
+     $( "#Upload" ).on( "click", function() {
+      $('#profile_avatar').trigger("click"); 
+      console.log("pushed");
+    });
+  }
+  
+</script>
+<div class="cardBody">
+<div class="head">
+Edit</div>
 <%= form_for @profile, :url => profile_path, :html => { :multipart => true, :method => :patch } do |f| %>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </div>
+  </div><br>
   <div class="field">
     <%= f.label :surname %><br>
     <%= f.text_field :surname %>
-  </div>
+  </div><br>
   <div class="field">
-    <%= f.label :age %>
+    <%= f.label :age %><br>
     <%= f.number_field :age %>
-  </div>
+  </div><br>
   <!-- Upload your attachments via a simple file_fields in the form -->
   <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
-  </div>
+  <table align="center">
+    <tr><td rowspan="2"><%= image_tag @profile.avatar.url(:thumb) %></td><td> <%= f.label :avatar %></td></tr>
+    <tr><td><div class="btn btn_solid" id="Upload">Upload</div></td></tr>
+  </table>
+  </div><br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Change", class: "btn btn_solid" %>
   </div>
+
+
+  <%= f.file_field :avatar, class: "hidden" %>
 <% end %>
+</div>
+</div>

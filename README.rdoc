@@ -10,8 +10,8 @@
 
 == Things To Do 
 * Install some magic :3 <tt>"~/$ brew install imagemagick"</tt>
-* Run the migrations.
 * "Bundleear" (Spanglish, almost Spaghetti)
+* Run the migrations.
 
 
 Thanks to all those of <tt>Flickr</tt> who posted such nice pics :3
