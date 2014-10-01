@@ -1,53 +1,7 @@
-<script type="text/javascript">
-	var ready;
-	ready = function() {
 
-	  launchBasic();
-		doRes();
-	};
-
-	$(document).ready(ready);
-	$(document).on('page:load', ready);
-
-	var imgGrind=250;
-	function launchBasic () {
-		var a=100;
-		$('img').attr("draggable","false")
-		$('.basic').each(function(){
-			doGrow(a,$(this));
-			a+=100;
-		});
-		setTimeout(function(){
-			$("#imOnList").css('opacity','1');
-		},a+100);
-	}
-	function doGrow (time, elem) {
-		setTimeout(function(){
-			$(elem).css('width',imgGrind+'px');
-			$(elem).css('height',imgGrind+'px');
-		},time);
-	}
-	$(window).scroll(function (event) {
-	    var scroll = $(window).scrollTop();
-	    if(scroll>10){
-	    	$("#Btn_holder").css("position","fixed");
-	    }else{
-	    	$("#Btn_holder").css("position","relative");
-	    }
-	});
-		
-</script>
-<style type="text/css">
-	#imOnList{
-		opacity: 0;
-	}
-</style>
-<%= render "partials/sidebar"%>
-	<div id="Btn_holder"><div style="margin-left:calc(50% - 100px);" align="center" id="imOnList" class="btn btn_solid">I am on the list.</div><br><br></div>
-<div class="contentI">
 <%=@m%><br>
 	<img class="basic" src="https://farm4.staticflickr.com/3930/15196319387_4649c1ed9c_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
-	<img class="basic" src="https://farm6.staticflickr.com/5557/15013691208_a2a736ba37_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
+	<img class="basic" src="https://lh6.googleusercontent.com/-XIDauIObgaY/AAAAAAAAAAI/AAAAAAAAAA4/EEMtRJHLhdU/photo.jpg" alt="">
 	<img class="basic" src="https://farm8.staticflickr.com/7286/9136896334_5dbe4d22db_q.jpg" alt="https://www.flickr.com/photos/darkpaul">
 	<img src="https://farm4.staticflickr.com/3884/15367856356_9f04678caf_q.jpg" alt="Unknown" class="basic">
 	<img src="https://farm3.staticflickr.com/2949/15390130192_a56eb9c1b6_q.jpg" alt="https://www.flickr.com/photos/stevensiegel/" class="basic">
@@ -64,5 +18,3 @@
 	<img src="https://farm4.staticflickr.com/3324/3544396399_f1565eeaa8_q.jpg" alt="https://www.flickr.com/photos/click_on/" class="basic">
 	<img src="http://i.picresize.com/images/2014/09/30/wOrj.jpg" alt="" class="basic">
 	<br><br>
-</div>
-
