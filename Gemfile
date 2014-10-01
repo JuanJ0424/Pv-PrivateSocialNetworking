@@ -32,7 +32,7 @@ end
 
 gem 'font-awesome-rails'
 
-gem 'paperclip', '~> 3.0'
+gem 'paperclip', '~> 4.2'
 
 gem 'devise', '3.0.0'
 
